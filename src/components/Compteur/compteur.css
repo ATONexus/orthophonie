@@ -1,0 +1,126 @@
+
+.compteur {
+  flex: 1;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid;
+  box-sizing: border-box;
+ 
+  width: 300px;
+  
+  
+}
+
+/* =========================
+   TITRE
+========================= */
+
+.compteur h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.compteur__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compteur__actions span {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+.compteur__actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+
+  font-size: 28px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.compteur__actions button:hover {
+  transform: scale(1.05);
+}
+
+.compteur__actions button:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   POSITIF
+========================= */
+
+.compteur.positif {
+  background: #f0fdf4;
+  border-color: #b7ead0;
+  color: #087443;
+}
+
+.compteur.positif .compteur__actions button {
+  background: #16a56a;
+  color: white;
+}
+
+.compteur.positif .compteur__actions button:first-child {
+  background: white;
+  color: #16a56a;
+  border: 2px solid #a9dec6;
+}
+
+/* =========================
+   NEGATIF
+========================= */
+
+.compteur.negatif {
+  background: #fff4f6;
+  border-color: #f6c3cf;
+  color: #c5284b;
+}
+
+.compteur.negatif .compteur__actions button {
+  background: #e92d4d;
+  color: white;
+}
+
+.compteur.negatif .compteur__actions button:first-child {
+  background: white;
+  color: #e92d4d;
+  border: 2px solid #f2b4c2;
+}
+
+/* =========================
+   ICONE
+========================= */
+
+.compteur svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}

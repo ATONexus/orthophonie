@@ -1,0 +1,122 @@
+.echelle {
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+.echelle-titre {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 18px;
+}
+
+/* Conteneur des boutons */
+.echelle-grades {
+  display: flex;
+    gap: 12px;
+    width: 100%;
+    
+}
+
+/* Boutons */
+.grade {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+
+    border: none;
+    border-radius: 14px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+/* Couleurs de l'échelle */
+
+.grade:nth-child(1) {
+    background: #22c55e;
+}
+
+.grade:nth-child(2) {
+    background: #34c759;
+}
+
+.grade:nth-child(3) {
+    background: #65c84a;
+}
+
+.grade:nth-child(4) {
+    background: #a3cf3d;
+}
+
+.grade:nth-child(5) {
+    background: #d4d438;
+}
+
+.grade:nth-child(6) {
+    background: #f2c438;
+}
+
+.grade:nth-child(7) {
+    background: #f5a623;
+}
+
+.grade:nth-child(8) {
+    background: #f47b20;
+}
+
+.grade:nth-child(9) {
+    background: #ef5428;
+}
+
+.grade:nth-child(10) {
+    background: #e53935;
+}
+
+/* Survol */
+.grade:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* Bouton sélectionné */
+.grade.active {
+    transform: scale(1.12);
+    box-shadow:
+        0 0 0 3px white,
+        0 0 0 6px rgba(59, 130, 246, 0.45),
+        0 6px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+}
+
+/* Légendes */
+.echelle-labels {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    padding: 0 4px;
+
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.echelle-labels span:last-child {
+    text-align: right;
+}

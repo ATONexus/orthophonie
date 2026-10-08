@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex ;
+  align-items: center;
+  width: 600px;
+  box-sizing: border-box;
+  justify-content: end;
+  margin: 0 auto ;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  
+}
+
+
+.date {
+  font-size: 16px;
+  color: #666;
+}
+.save {
+  
+  border-radius: 20px;
+  border: none;
+background-color: blueviolet;
+color:#fff;
+
+
+padding: 10px;
+font-size:medium;
+cursor: pointer;
+}
+
+ 
+
+.box {
+  border-radius: 10px;
+  border: solid 1px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.noteTitre {
+  font-size: 24px;
+}
+
+.btnChoix button {
+  border-radius: 10px;
+  font-size: 20px;
+  display: inline-flex;
+  border: 1px solid;
+  width: 225px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+  
+}
+
+.btnChoix button:hover {
+background-color: rgb(100, 167, 226);;
+transition: 0.5s;
+transform: scale(1.1);
+}
+
+.btnChoix button.active {
+  background-color: #4f46e5;
+}
+
+
+.ratio-mauvais{
+  background-color: rgba(255, 39, 39, 0.421);
+}
+
+
+
+.description {
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 90%;
+  height: 100px;
+}
+
+.boxActivite{
+  display: flex;
+  gap:15px;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+
+}
+
+h3 {
+  margin: 15px 0;
+}
+
+.compteurs {
+  display: flex;
+  gap: 16px;
+  margin: auto;
+
+  
+}
