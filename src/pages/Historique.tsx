@@ -1,4 +1,3 @@
-import Menu from "../components/Menu/menu";
 import { getSession, type Session } from "../Database/db";
 import { useEffect, useState } from "react";
 

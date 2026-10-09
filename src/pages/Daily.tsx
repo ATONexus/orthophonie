@@ -105,6 +105,7 @@ function Daily() {
         audio: audioBlob,
       });
     }
+    console.log(audioUrl);
 
     sauvegarderDraft().catch(console.error);
   }, [severite, typeActivite, comm, compteurP, compteurN, audioBlob]);
