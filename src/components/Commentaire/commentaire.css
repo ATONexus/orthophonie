@@ -1,20 +1,19 @@
 .boxDesc {
-    width: 100%;
-    max-width: 600px;
-    
-    box-sizing: border-box;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 0 auto;
- 
+  width: 100%;
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.boxDesc textarea{
-    width: 600px;
-    border-radius: 20px;
-    height: 150px;
-    padding: 10px;
-    resize: none ;
-    font-family: 'Courier New', Courier, monospace;
+.boxDesc textarea {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #6b54d8;
+  height: 150px;
+  padding: 10px;
+  resize: none;
+  font-family: "Montserrat", Courier, monospace;
 }

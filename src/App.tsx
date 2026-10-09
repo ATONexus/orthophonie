@@ -1,17 +1,21 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./components/Menu/menu";
 import Daily from "./pages/Daily";
 import Historique from "./pages/Historique";
+import Accueil from "./pages/Accueil";
 
 function App() {
   return (
     <BrowserRouter>
-      {" "}
-      <Routes>
-        <Route path="/" element={<Navigate to="/daily" replace />} />
-        <Route path="/daily" element={<Daily />} />
-        <Route path="/historique" element={<Historique />} />{" "}
-      </Routes>{" "}
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/daily" element={<Daily />} />
+          <Route path="/historique" element={<Historique />} />
+        </Routes>
+      </main>
+
+      <Menu />
     </BrowserRouter>
   );
 }

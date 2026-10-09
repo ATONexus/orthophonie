@@ -1,424 +1,390 @@
 .enregistrement {
-    width: 600px;
-    padding: 22px;
-    box-sizing: border-box;
+  width: 100%;
 
-margin: 0 auto;
+  box-sizing: border-box;
 
+  margin: 0 auto;
 }
-
 
 /* =========================
    HEADER
 ========================= */
 
 .enregistrement-header {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .enregistrement-header h3 {
-    margin: 0;
+  margin: 0;
 
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 
-    color: #20222a;
+  color: #20222a;
 }
 
 .enregistrement-header p {
-    margin: 5px 0 0;
+  margin: 5px 0 0;
 
-    font-size: 13px;
-    color: #8a8d98;
+  font-size: 13px;
+  color: #8a8d98;
 }
-
 
 /* =========================
    BOUTON ENREGISTRER
 ========================= */
 
 .record-button {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    gap: 12px;
+  gap: 12px;
 
-    padding: 14px 18px;
+  padding: 14px 18px;
 
-    border: black 1px solid;
-    border-radius: 13px;
+  border: #6b54d8 1px solid;
+  border-radius: 13px;
 
-    background: #4ced4f85;
+  background: #f5f4ff;
 
-    color: black;
+  color: #6b54d8;
 
-    font-size: 14px;
-    font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    box-shadow:
-        0 7px 18px rgba(99, 102, 241, 0.22);
+  box-shadow: 0 7px 18px rgba(99, 102, 241, 0.22);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .record-button:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 
-    box-shadow:
-        0 10px 24px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.3);
 }
 
 .record-button:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
-
 
 .record-icon {
-    width: 34px;
-    height: 34px;
+  width: 34px;
+  height: 34px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.18);
 
-    font-size: 17px;
+  font-size: 17px;
 }
-
 
 /* =========================
    ENREGISTREMENT EN COURS
 ========================= */
 
 .recording-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    gap: 15px;
+  gap: 15px;
 
-    padding: 15px;
+  padding: 15px;
 
-    border-radius: 14px;
+  border-radius: 14px;
 
-    background: #fafafa;
-    border: 1px solid #eeeeee;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
 }
-
 
 .recording-status {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    gap: 11px;
+  gap: 11px;
 }
-
 
 .recording-status div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: 3px;
+  gap: 3px;
 }
-
 
 .recording-status strong {
-    font-size: 14px;
-    color: #252731;
+  font-size: 14px;
+  color: #252731;
 }
-
 
 .recording-status span:not(.recording-dot) {
-    font-size: 12px;
-    color: #9699a4;
+  font-size: 12px;
+  color: #9699a4;
 }
-
 
 .recording-dot {
-    width: 11px;
-    height: 11px;
+  width: 11px;
+  height: 11px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #ef4444;
+  background: #ef4444;
 
-    box-shadow:
-        0 0 0 5px rgba(239, 68, 68, 0.12);
+  box-shadow: 0 0 0 5px rgba(239, 68, 68, 0.12);
 
-    animation: recordingPulse 1.2s infinite;
+  animation: recordingPulse 1.2s infinite;
 }
-
 
 @keyframes recordingPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
 
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
 
-    50% {
-        opacity: 0.45;
-        transform: scale(0.85);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
 
 /* =========================
    BOUTON STOP
 ========================= */
 
 .stop-button {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    gap: 8px;
+  gap: 8px;
 
-    padding: 9px 14px;
+  padding: 9px 14px;
 
-    border: none;
-    border-radius: 9px;
+  border: none;
+  border-radius: 9px;
 
-    background: #fff0f0;
+  background: #fff0f0;
 
-    color: #dc2626;
+  color: #dc2626;
 
-    font-size: 13px;
-    font-weight: 600;
+  font-size: 13px;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: background 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .stop-button:hover {
-    background: #ffe1e1;
+  background: #ffe1e1;
 }
-
 
 .stop-icon {
-    width: 9px;
-    height: 9px;
+  width: 9px;
+  height: 9px;
 
-    border-radius: 2px;
+  border-radius: 2px;
 
-    background: #dc2626;
+  background: #dc2626;
 }
-
 
 /* =========================
    PLAYER
 ========================= */
 
 .audio-player {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    gap: 13px;
+  gap: 13px;
 
-    padding: 13px 14px;
+  padding: 13px 14px;
 
-    border-radius: 14px;
+  border-radius: 14px;
 
-    background: #f8f8fb;
+  background: #f8f8fb;
 
-    border: 1px solid #ececf1;
+  border: 1px solid #ececf1;
 }
-
 
 /* Play */
 
 .play-button {
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: none;
-    border-radius: 50%;
+  border: none;
+  border-radius: 50%;
 
-    background: linear-gradient(
-        135deg,
-        #6366f1,
-        #8b5cf6
-    );
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
 
-    color: white;
+  color: white;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    box-shadow:
-        0 5px 12px rgba(99, 102, 241, 0.22);
+  box-shadow: 0 5px 12px rgba(99, 102, 241, 0.22);
 
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .play-button:hover {
-    transform: scale(1.06);
+  transform: scale(1.06);
 }
-
 
 /* Contenu player */
 
 .player-content {
-    flex: 1;
+  flex: 1;
 
-    min-width: 0;
+  min-width: 0;
 }
-
 
 .player-top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 
-    font-size: 11px;
+  font-size: 11px;
 
-    color: #858894;
+  color: #858894;
 }
-
 
 /* Barre */
 
 .progress-bar {
-    width: 100%;
-    height: 5px;
+  width: 100%;
+  height: 5px;
 
-    appearance: none;
+  appearance: none;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    background: #dedee6;
+  background: #dedee6;
 
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 /* Chrome / Edge */
 
 .progress-bar::-webkit-slider-thumb {
-    appearance: none;
+  appearance: none;
 
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #6366f1;
+  background: #6366f1;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
-
 
 /* Firefox */
 
 .progress-bar::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 
-    border: none;
+  border: none;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #6366f1;
+  background: #6366f1;
 
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 /* =========================
    SUPPRIMER
 ========================= */
 
 .delete-button {
-    width: 34px;
-    height: 34px;
+  width: 40px;
+  height: 40px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: none;
-    border-radius: 9px;
+  border: none;
+  border-radius: 9px;
 
-    background: transparent;
+  background: transparent;
 
-    color: #9b9da7;
+  color: #9b9da7;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .delete-button:hover {
-    background: #ffecec;
+  background: #ffecec;
 
-    color: #dc2626;
+  color: #dc2626;
 }
-
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 600px) {
+  .enregistrement {
+    padding: 16px;
+  }
 
-    .enregistrement {
-        padding: 16px;
-    }
+  .recording-container {
+    align-items: stretch;
+    flex-direction: column;
+  }
 
-    .recording-container {
-        align-items: stretch;
-        flex-direction: column;
-    }
+  .stop-button {
+    justify-content: center;
+  }
 
-    .stop-button {
-        justify-content: center;
-    }
+  .audio-player {
+    gap: 9px;
+    padding: 10px;
+  }
 
-    .audio-player {
-        gap: 9px;
-        padding: 10px;
-    }
+  .play-button {
+    width: 38px;
+    height: 38px;
+  }
 
-    .play-button {
-        width: 38px;
-        height: 38px;
-    }
-
-    .delete-button {
-        width: 30px;
-        height: 30px;
-    }
+  .delete-button {
+    width: 30px;
+    height: 30px;
+  }
 }

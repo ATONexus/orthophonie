@@ -1,14 +1,9 @@
-
 .compteur {
   flex: 1;
   padding: 20px;
   border-radius: 16px;
   border: 1px solid;
   box-sizing: border-box;
- 
-  width: 300px;
-  
-  
 }
 
 /* =========================
