@@ -1,4 +1,4 @@
-import "./Compteur.css";
+import "./compteur.css";
 import type { ReactNode } from "react";
 
 type CompteurProps = {
@@ -16,12 +16,10 @@ function Compteur({
   couleur,
   icone,
   onIncrement,
-  onDecrement
+  onDecrement,
 }: CompteurProps) {
-
   return (
     <div className={`compteur ${couleur}`}>
-
       {/* Nom + icône */}
       <h3>
         {icone}
@@ -30,21 +28,12 @@ function Compteur({
 
       {/* Boutons + valeur */}
       <div className="compteur__actions">
+        <button onClick={onDecrement}>-</button>
 
-        <button onClick={onDecrement}>
-          -
-        </button>
+        <span>{valeur}</span>
 
-        <span>
-          {valeur}
-        </span>
-
-        <button onClick={onIncrement}>
-          +
-        </button>
-
+        <button onClick={onIncrement}>+</button>
       </div>
-
     </div>
   );
 }
