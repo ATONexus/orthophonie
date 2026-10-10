@@ -70,12 +70,6 @@ function Accueil() {
             <div className="accueil-card-titre">Historique</div>
           </div>
         </NavLink>
-        <NavLink to="/Aide" end className="accueil-item">
-          <div className="accueil-card">
-            <MessageCircleQuestionMark className="accueil-card-icon" />
-            <div className="accueil-card-titre">Aide</div>
-          </div>
-        </NavLink>
       </div>
     </div>
   );

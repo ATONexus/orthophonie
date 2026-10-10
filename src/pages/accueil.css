@@ -115,3 +115,9 @@
 .accueil-item {
   text-decoration: none;
 }
+
+@media (max-width: 600px) {
+  .accueil-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
