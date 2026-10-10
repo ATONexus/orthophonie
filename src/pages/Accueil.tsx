@@ -1,9 +1,4 @@
-import {
-  HeartPulse,
-  CalendarCheck,
-  ChartColumn,
-  MessageCircleQuestionMark,
-} from "lucide-react";
+import { HeartPulse, CalendarCheck, ChartColumn } from "lucide-react";
 import "./accueil.css";
 import { getSessionByDate } from "../Database/db";
 import { useEffect, useState } from "react";
