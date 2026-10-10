@@ -10,7 +10,8 @@
   width: 100%;
   box-sizing: border-box;
   justify-content: end;
-  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 15px;
   margin-top: 5px;
 }
@@ -80,27 +81,28 @@
   gap: 15px;
   justify-content: center;
   align-items: center;
-  margin: 15px 20px;
+  margin: 20px;
+  margin-top: 30px;
 }
 
 .boxEchelle {
-  margin: 15px 20px;
+  margin: 20px;
+  margin-top: 30px;
 }
 
 .boxComm {
-  margin: 15px 20px;
+  margin: 20px;
+  margin-top: 30px;
 }
 
 .boxEnregistrement {
-  margin: 15px 20px;
-}
-
-h3 {
-  margin: 15px 0;
+  margin: 20px;
+  margin-top: 30px;
 }
 
 .compteurs {
   display: flex;
   gap: 16px;
-  margin: 15px 20px;
+  margin: 20px;
+  margin-top: 30px;
 }

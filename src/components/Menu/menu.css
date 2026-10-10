@@ -56,10 +56,3 @@
 .menu-item:active {
   transform: scale(0.94);
 }
-
-/* Affichage mobile */
-@media (max-width: 767px) {
-  .menu-mobile {
-    display: grid;
-  }
-}

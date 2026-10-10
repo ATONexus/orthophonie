@@ -6,13 +6,6 @@
   margin: auto;
 }
 
-.echelle-titre {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 18px;
-}
-
 /* Conteneur des boutons */
 .echelle-grades {
   display: flex;
@@ -115,4 +108,44 @@
 
 .echelle-labels span:last-child {
   text-align: right;
+}
+
+@media (max-width: 600px) {
+  .echelle {
+    width: 100%;
+
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  .grade {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+
+    border: none;
+    border-radius: 14px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .grade:nth-child(10) {
+    font-size: 13px;
+  }
+
+  .echelle-grades {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
 }

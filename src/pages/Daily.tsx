@@ -137,7 +137,6 @@ function Daily() {
         )}
       </div>
       <div>
-        <h3>Type d'activité</h3>
         <div className="boxActivite">
           <Activite
             nom={"Exercice"}
@@ -154,7 +153,6 @@ function Daily() {
         </div>
 
         <div className="boxEchelle">
-          <h3>Échelle de sévérité</h3>
           <Echelle severite={severite} onChange={setSeverite} />
         </div>
       </div>
@@ -178,11 +176,9 @@ function Daily() {
         />
       </div>
       <div className="boxComm">
-        <h3>Commentaire sur la journée</h3>
         <Commentaire val={comm} onChange={setComm} />
       </div>
       <div className="boxEnregistrement">
-        <h3>Enregistrement Audio</h3>
         <Enregistrement
           onRecordingComplete={(blob, url) => {
             setAudioBlob(blob);

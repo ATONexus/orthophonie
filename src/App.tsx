@@ -3,6 +3,7 @@ import Menu from "./components/Menu/menu";
 import Daily from "./pages/Daily";
 import Historique from "./pages/Historique";
 import Accueil from "./pages/Accueil";
+import "./App.css";
 
 function App() {
   return (

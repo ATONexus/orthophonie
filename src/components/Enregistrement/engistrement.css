@@ -388,3 +388,9 @@
     height: 30px;
   }
 }
+
+@media (max-width: 400px) {
+  .record-button {
+    padding: 12px 14px;
+  }
+}

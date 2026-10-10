@@ -108,3 +108,33 @@
 .activity-card.selected:hover {
   border-color: #6b54d8;
 }
+
+@media (max-width: 600px) {
+  .activity-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 56px;
+
+    padding: 8px 12px;
+  }
+
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .activity-name {
+    font-size: 15px;
+  }
+
+  .activity-radio {
+    width: 20px;
+    height: 20px;
+  }
+
+  .activity-radio-inner {
+    width: 10px;
+    height: 10px;
+  }
+}

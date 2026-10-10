@@ -17,3 +17,9 @@
   resize: none;
   font-family: "Montserrat", Courier, monospace;
 }
+
+@media (max-width: 600px) {
+  .boxDesc textarea {
+    height: 100px;
+  }
+}

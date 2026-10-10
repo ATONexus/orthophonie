@@ -119,3 +119,25 @@
   height: 30px;
   flex-shrink: 0;
 }
+
+@media (max-width: 600px) {
+  .compteur {
+    padding: 10px;
+  }
+
+  .compteur h3 {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .compteur__actions span {
+    font-size: 32px;
+  }
+
+  .compteur__actions button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+  }
+}
