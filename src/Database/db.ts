@@ -112,7 +112,7 @@ export async function clearDraft(): Promise<Draft | undefined> {
 export type Session = {
   id?: number;
   date: string;
-  severite: number | null;
+  severite: number;
   activite: string | null;
   renforcementPositif: number;
   renforcementNegatif: number;

@@ -28,11 +28,11 @@ function Compteur({
 
       {/* Boutons + valeur */}
       <div className="compteur__actions">
-        <button onClick={onDecrement}>-</button>
-
         <span>{valeur}</span>
-
-        <button onClick={onIncrement}>+</button>
+        <div className="boxCompteurs">
+          <button onClick={onDecrement}>-</button>
+          <button onClick={onIncrement}>+</button>
+        </div>
       </div>
     </div>
   );

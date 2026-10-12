@@ -1,9 +1,30 @@
+import {
+  Calendar,
+  ChartNoAxesCombined,
+  ChevronDown,
+  ThumbsDown,
+  ThumbsUp,
+} from "lucide-react";
 import { getSession, type Session } from "../Database/db";
 import { useEffect, useState } from "react";
+
+import "./suivi.css";
 
 function Suivi() {
   const [isSessions, setIsSessions] = useState(false);
   const [sessions, setSessions] = useState<Session[]>([]);
+
+  const [ouvert, setOuvert] = useState(false);
+  const [selection, setSelection] = useState("7 derniers jours");
+  const duree = [
+    { icone: <Calendar />, valeur: "7 derniers jours" },
+    { icone: <Calendar />, valeur: "14 derniers jours" },
+    { icone: <Calendar />, valeur: "30 derniers jours" },
+  ];
+  const [moyenne, setMoyenne] = useState(0);
+  const [positif, setPositif] = useState(0);
+  const [negatif, setNegatif] = useState(0);
+
   // Charger le brouillon depuis IndexedDB lors de l'ouverture de la page
   useEffect(() => {
     async function chargerSessions() {
@@ -15,6 +36,9 @@ function Suivi() {
         } else {
           setIsSessions(true);
           setSessions(sessionData);
+          calculMoyenne(sessionData);
+          calculPositif(sessionData);
+          calculNegatif(sessionData);
         }
       } catch (error) {
         console.error("Erreur lors du chargement des sessions :", error);
@@ -24,14 +48,88 @@ function Suivi() {
     chargerSessions();
   }, []);
 
+  function calculMoyenne(data: Session[]) {
+    let total = 0;
+    data.map((d) => {
+      total += d.severite;
+    });
+    setMoyenne(total / data.length);
+  }
+
+  function calculPositif(data: Session[]) {
+    let total = 0;
+    data.map((d) => {
+      total += d.renforcementPositif;
+    });
+    setPositif(total);
+  }
+
+  function calculNegatif(data: Session[]) {
+    let total = 0;
+    data.map((d) => {
+      total += d.renforcementNegatif;
+    });
+    setNegatif(total);
+  }
+
   return (
     <div>
-      <div>Suivi</div>
-      <div>Box header button 7, 15 30 jours</div>
+      <div className="accueil-container">
+        <ChartNoAxesCombined className="heart" />
+        <div className="accueil-text">
+          <h1>Mon suivi</h1>
+          <p>suivi</p>
+        </div>
+      </div>
+      <div className="dropdown">
+        <button
+          className="firstButton"
+          type="button"
+          onClick={() => setOuvert(!ouvert)}
+        >
+          {duree.find((a) => a.valeur === selection)?.icone} {selection}
+          <ChevronDown />
+        </button>
+
+        {ouvert && (
+          <div className="dropdown-menu">
+            {duree.map((activite) => (
+              <button
+                type="button"
+                key={activite.valeur}
+                onClick={() => {
+                  setSelection(activite.valeur);
+                  setOuvert(false);
+                }}
+              >
+                {activite.icone} {activite.valeur}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
       <div>Graph evolution</div>
       <div>tendances</div>
-      <div>Moyenne sévérité</div>
-      <div>renforcements avec positif + négatif + ratio</div>
+      <div>
+        <div>Moyenne sévérité</div>
+
+        <div>Moyenne : {moyenne}</div>
+      </div>
+      <div className="renfoBox">
+        <div className="renfoTxt">
+          <div>Renforcements</div>
+          <div>ratio positif / négatif</div>
+        </div>
+        <div className="renfo vert">
+          <ThumbsUp className="ico" />
+          <div className="positif">{positif}</div>
+        </div>
+        <div className="renfo rouge">
+          <ThumbsDown className="ico" />
+          <div className="negatif">{negatif}</div>
+        </div>
+      </div>
+      <progress className="ratio" max={positif + negatif} value={positif - 1} />
 
       {isSessions ? (
         <ul>
@@ -39,6 +137,7 @@ function Suivi() {
             <li key={session.id}>
               <p>Date: {session.date}</p>
               <p>Activité: {session.activite}</p>
+              <p>Severite: {session.severite}</p>
               <p>Rénforcement positif: {session.renforcementPositif}</p>
               <p>Rénforcement négatif: {session.renforcementNegatif}</p>
               <p>Commentaire: {session.commentaire}</p>

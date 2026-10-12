@@ -14,8 +14,11 @@ import {
 } from "../Database/db";
 
 import {
+  ClipboardList,
+  Edit,
   GraduationCap,
   MessageCircleMore,
+  Save,
   ThumbsDown,
   ThumbsUp,
 } from "lucide-react";
@@ -112,12 +115,13 @@ function Daily() {
 
   return (
     <>
-      <div className="header">
-        <div className="date">{dateLongue}</div>
-        <div>
-          {dailySave ? "Journée sauvegardée" : "Journée non sauvegardée"}
+      <div className="accueil-container">
+        <ClipboardList className="heart" />
+        <div className="accueil-text">
+          <h1>Ma séance</h1>
+          <p>{dateLongue}</p>
         </div>
-        {dailySave ? null : (
+        <div className="boxtest">
           <button
             className="save"
             onClick={() =>
@@ -132,9 +136,9 @@ function Daily() {
               })
             }
           >
-            Enregistrer la journée
+            {dailySave ? <Edit /> : <Save />}
           </button>
-        )}
+        </div>
       </div>
       <div>
         <div className="boxActivite">
