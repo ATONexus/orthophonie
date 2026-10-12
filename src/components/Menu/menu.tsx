@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { ClipboardList, House, Settings, History } from "lucide-react";
+import {
+  ClipboardList,
+  House,
+  Settings,
+  ChartNoAxesCombined,
+} from "lucide-react";
 import "./menu.css";
 
 function Menu() {
@@ -19,11 +24,11 @@ function Menu() {
         <span>Séance</span>
       </NavLink>
 
-      <NavLink to="/historique" className="menu-item">
+      <NavLink to="/Suivi" className="menu-item">
         <span className="menu-icon">
-          <History />
+          <ChartNoAxesCombined />
         </span>
-        <span>Historique</span>
+        <span>Suivi</span>
       </NavLink>
 
       <NavLink to="/parametres" className="menu-item">

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu/menu";
 import Daily from "./pages/Daily";
-import Historique from "./pages/Historique";
+import Suivi from "./pages/Suivi";
 import Accueil from "./pages/Accueil";
 import "./App.css";
 
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/daily" element={<Daily />} />
-          <Route path="/historique" element={<Historique />} />
+          <Route path="/suivi" element={<Suivi />} />
         </Routes>
       </main>
 

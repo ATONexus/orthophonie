@@ -19,11 +19,6 @@ function Activite({ nom, icone, selectionne, onClick }: ActiviteProps) {
 
       {/* Nom */}
       <span className="activity-name">{nom}</span>
-
-      {/* Radio */}
-      <div className="activity-radio">
-        {selectionne && <div className="activity-radio-inner" />}
-      </div>
     </div>
   );
 }
