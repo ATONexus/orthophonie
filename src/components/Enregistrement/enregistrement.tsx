@@ -181,14 +181,12 @@ function Enregistrement({ onRecordingComplete }: EnregistrementProps) {
 
             <div>
               <strong>Enregistrement en cours</strong>
-              <span>Parlez normalement...</span>
             </div>
+            <button className="stop-button" onClick={stopRecording}>
+              <span className="stop-icon"></span>
+              Arrêter
+            </button>
           </div>
-
-          <button className="stop-button" onClick={stopRecording}>
-            <span className="stop-icon"></span>
-            Arrêter
-          </button>
         </div>
       )}
 

@@ -21,16 +21,17 @@ function Compteur({
   return (
     <div className={`compteur ${couleur}`}>
       {/* Nom + icône */}
-      {icone}
-      <h3>{nom}</h3>
+
+      <h3>
+        {icone}
+        {nom}
+      </h3>
 
       {/* Boutons + valeur */}
       <div className="compteur__actions">
+        <button onClick={onDecrement}>-</button>
         <span>{valeur}</span>
-        <div className="boxCompteurs">
-          <button onClick={onDecrement}>-</button>
-          <button onClick={onIncrement}>+</button>
-        </div>
+        <button onClick={onIncrement}>+</button>
       </div>
     </div>
   );

@@ -7,14 +7,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .boxDesc textarea {
   width: 100%;
   border-radius: 20px;
   border: 1px solid #6b54d8;
-  height: 150px;
+  height: 80px;
   padding: 10px;
   resize: none;
   font-family: "Montserrat", Courier, monospace;
@@ -22,6 +22,6 @@
 
 @media (max-width: 600px) {
   .boxDesc textarea {
-    height: 100px;
+    height: 80px;
   }
 }

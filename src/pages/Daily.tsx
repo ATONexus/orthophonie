@@ -162,7 +162,7 @@ function Daily() {
       </div>
       <div className="compteurs">
         <Compteur
-          nom="Renforcements positifs"
+          nom="Positifs"
           valeur={compteurP}
           couleur="positif"
           icone={<ThumbsUp />}
@@ -171,7 +171,7 @@ function Daily() {
         />
 
         <Compteur
-          nom="Renforcements négatifs"
+          nom="Négatifs"
           valeur={compteurN}
           couleur="negatif"
           icone={<ThumbsDown />}
