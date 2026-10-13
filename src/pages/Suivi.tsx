@@ -2,6 +2,7 @@ import {
   Calendar,
   ChartNoAxesCombined,
   ChevronDown,
+  Star,
   ThumbsDown,
   ThumbsUp,
 } from "lucide-react";
@@ -24,6 +25,7 @@ function Suivi() {
   const [moyenne, setMoyenne] = useState(0);
   const [positif, setPositif] = useState(0);
   const [negatif, setNegatif] = useState(0);
+  const [ratio, setRatio] = useState("");
 
   // Charger le brouillon depuis IndexedDB lors de l'ouverture de la page
   useEffect(() => {
@@ -39,6 +41,7 @@ function Suivi() {
           calculMoyenne(sessionData);
           calculPositif(sessionData);
           calculNegatif(sessionData);
+          calculRatio(sessionData);
         }
       } catch (error) {
         console.error("Erreur lors du chargement des sessions :", error);
@@ -70,6 +73,21 @@ function Suivi() {
       total += d.renforcementNegatif;
     });
     setNegatif(total);
+  }
+
+  function calculRatio(data: Session[]) {
+    let pos = 0;
+    let neg = 0;
+
+    data.map((d) => {
+      pos += d.renforcementPositif;
+      neg += d.renforcementNegatif;
+    });
+    if (neg === 0) {
+      setRatio(pos + " : 0");
+    } else {
+      setRatio(pos / neg + " : 1");
+    }
   }
 
   return (
@@ -115,21 +133,29 @@ function Suivi() {
 
         <div>Moyenne : {moyenne}</div>
       </div>
-      <div className="renfoBox">
-        <div className="renfoTxt">
-          <div>Renforcements</div>
-          <div>ratio positif / négatif</div>
+      <div className="megarenfobox">
+        <div className="renfoBox">
+          <Star className="star" />
+          <div className="renfoTxt">
+            <div className="renfoTitre">Renforcements</div>
+            <div className="renfoDesc">ratio positif / négatif</div>
+          </div>
+          <div className="renfo vert">
+            <ThumbsUp className="ico" />
+            <div className="positif">{positif}</div>
+          </div>
+          <div className="renfo rouge">
+            <ThumbsDown className="ico" />
+            <div className="negatif">{negatif}</div>
+          </div>
         </div>
-        <div className="renfo vert">
-          <ThumbsUp className="ico" />
-          <div className="positif">{positif}</div>
-        </div>
-        <div className="renfo rouge">
-          <ThumbsDown className="ico" />
-          <div className="negatif">{negatif}</div>
+        <div className="ratioBox">
+          <progress className="ratio" max={positif + negatif} value={positif} />
+          <div className={`ratioTxt ${positif > negatif ? "vertR" : "rougeR"}`}>
+            Le ratio est de {ratio}
+          </div>
         </div>
       </div>
-      <progress className="ratio" max={positif + negatif} value={positif - 1} />
 
       {isSessions ? (
         <ul>
