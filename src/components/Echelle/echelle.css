@@ -1,7 +1,7 @@
 .echelle {
   width: fit-content;
-  max-width: 100%;
-  padding: 20px;
+  max-width: 90%;
+  padding: 10px;
   box-sizing: border-box;
   margin: auto;
 }
@@ -16,8 +16,8 @@
 
 /* Boutons */
 .grade {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 
   border: none;
   border-radius: 14px;
@@ -105,18 +105,22 @@
 @media (max-width: 700px) {
   .echelle {
     width: fit-content;
+
     max-width: 100%;
-    padding: 15px;
+    padding: 10px;
+    padding-left: 0;
   }
 
   .echelle-grades {
-    grid-template-columns: repeat(5, 40px);
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 40px);
+    align-items: center;
+    gap: 20px;
   }
 
   .grade {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
     border-radius: 50%;
 
@@ -137,8 +141,7 @@
 
 @media (max-width: 450px) {
   .echelle-grades {
-    grid-template-columns: repeat(4, 40px);
-    gap: 30px;
+    grid-template-columns: repeat(10, 20px);
   }
 
   /* Les légendes suivent la même grille */

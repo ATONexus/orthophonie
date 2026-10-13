@@ -21,10 +21,8 @@ function Compteur({
   return (
     <div className={`compteur ${couleur}`}>
       {/* Nom + icône */}
-      <h3>
-        {icone}
-        {nom}
-      </h3>
+      {icone}
+      <h3>{nom}</h3>
 
       {/* Boutons + valeur */}
       <div className="compteur__actions">

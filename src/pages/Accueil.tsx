@@ -1,4 +1,4 @@
-import { HeartPulse, CalendarCheck, ChartColumn } from "lucide-react";
+import { HeartPulse, CalendarCheck, ChartNoAxesCombined } from "lucide-react";
 import "./accueil.css";
 import { getSessionByDate } from "../Database/db";
 import { useEffect, useState } from "react";
@@ -61,8 +61,8 @@ function Accueil() {
         </NavLink>
         <NavLink to="/Historique" end className="accueil-item">
           <div className="accueil-card">
-            <ChartColumn className="accueil-card-icon" />
-            <div className="accueil-card-titre">Historique</div>
+            <ChartNoAxesCombined className="accueil-card-icon" />
+            <div className="accueil-card-titre">Suivi</div>
           </div>
         </NavLink>
       </div>

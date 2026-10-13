@@ -121,18 +121,11 @@
 
 .compteurs {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+
   margin: 20px;
   margin-top: 30px;
 }
 
 @media (max-width: 430px) {
-  .compteurs {
-    flex-direction: column;
-  }
-
-  .boxActivite {
-    display: flex;
-    flex-direction: column;
-  }
 }

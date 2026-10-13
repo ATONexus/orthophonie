@@ -61,7 +61,7 @@
 .accueil-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
+  gap: 20px;
   margin: 20px;
   padding: 10px;
   box-sizing: border-box;
@@ -74,7 +74,7 @@
   justify-content: center;
 
   width: 100%;
-  height: 200px;
+  height: 160px;
   padding: 10px;
   border-radius: 20px;
   border: 2px solid #f5f4ff;
