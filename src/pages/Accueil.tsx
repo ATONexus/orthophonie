@@ -40,9 +40,7 @@ function Accueil() {
         </div>
       </div>
       <div className="accueil-content">
-        <div className="accueil-titre">
-          Bonjour Timéo, hauteur : {innerHeight} largeur : {innerWidth}
-        </div>
+        <div className="accueil-titre">Bonjour Timéo,</div>
         <div className="accueil-message">
           {dailySave
             ? "Bravo tu as terminé ta séance !"
