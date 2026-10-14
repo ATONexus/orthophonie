@@ -36,7 +36,7 @@
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
-  width: 90%;
+  width: 95%;
   font-family: inherit;
   color: #1e293b;
 }
@@ -308,4 +308,102 @@
   margin-bottom: 15px;
   line-height: 0.5;
   font-size: 12px;
+}
+
+.boxGraph {
+  margin-top: 10px;
+}
+
+.tendanceBox {
+  height: 70px;
+  font-size: 12px;
+  width: 44%;
+  display: flex;
+  border: #6b54d8 1px solid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.tendanceBox2 {
+  height: 70px;
+  font-size: 12px;
+  width: 44%;
+  display: flex;
+  border: #6b54d8 1px solid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin-right: 10px;
+}
+
+.tendanceTxt {
+  display: flex;
+  flex-direction: column;
+}
+
+.tendance-icon {
+  margin-top: 8px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  border: #1e293b 1px solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.baisse {
+  color: #1ec095;
+}
+
+.hausse {
+  color: #f05b91;
+}
+
+.stable {
+  color: #f5c84c;
+}
+
+.etat {
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.tendanceSeveriteBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.severiteBox {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.severite-icon {
+  margin-top: 0px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  border: #1e293b 1px solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.severiteTxt {
+}
+
+.moyenne {
+  font-size: 18px;
+  font-weight: 900;
 }
